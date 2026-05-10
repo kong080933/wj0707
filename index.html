@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Branding Designer | Professional Portfolio</title>
+    <title>아트 브랜딩 디자이너 | 전문 포트폴리오</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -23,7 +23,7 @@
         /* Dark Mode Support */
         @media (prefers-color-scheme: dark) {
             body {
-                @apply bg-gray-900 text-white;
+                @apply bg-gray-50 text-gray-900;
             }
         }
 
@@ -52,7 +52,7 @@
         /* Hero Section */
         .hero-section {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #E8F4FF 0%, #D4E8FF 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -61,12 +61,12 @@
         }
 
         .hero-section.dark {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #E8F4FF 0%, #D4E8FF 100%);
         }
 
         .hero-content {
             text-align: center;
-            color: white;
+            color: #1a3a52;
             z-index: 10;
         }
 
@@ -79,7 +79,7 @@
 
         .hero-content p {
             font-size: 1.3rem;
-            opacity: 0.95;
+            opacity: 0.85;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
@@ -92,8 +92,8 @@
         }
 
         .btn-primary {
-            background: var(--primary);
-            color: #333;
+            background: #667eea;
+            color: white;
             padding: 0.75rem 2rem;
             border-radius: 50px;
             font-weight: 600;
@@ -103,13 +103,14 @@
         }
 
         .btn-primary:hover {
+            background: #5568d3;
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(191, 225, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
         .btn-secondary {
-            border: 2px solid white;
-            color: white;
+            border: 2px solid #667eea;
+            color: #667eea;
             background: transparent;
             padding: 0.75rem 2rem;
             border-radius: 50px;
@@ -119,8 +120,8 @@
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: #667eea;
+            background: #667eea;
+            color: white;
             transform: translateY(-3px);
         }
 
@@ -148,7 +149,12 @@
             border-radius: 15px;
             cursor: pointer;
             aspect-ratio: 1;
-            group;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .portfolio-item img {
@@ -242,10 +248,11 @@
         /* Section Spacing */
         .section {
             padding: 5rem 2rem;
+            background: white;
         }
 
-        .dark-mode .section {
-            background: #111827;
+        .section.alt {
+            background: #f8fbff;
         }
 
         /* Skill Icons */
@@ -253,6 +260,7 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             display: inline-block;
+            color: #667eea;
         }
 
         .skill-card {
@@ -260,10 +268,14 @@
             padding: 2rem;
             border-radius: 10px;
             transition: all 0.3s ease;
+            background: #f0f7ff;
+            border: 2px solid #e0ecff;
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
+            background: #e0ecff;
+            border-color: #bfe1ff;
         }
 
         /* Contact Form */
@@ -275,24 +287,19 @@
         .form-group textarea {
             width: 100%;
             padding: 0.75rem;
-            border: 2px solid #ddd;
+            border: 2px solid #e0e0e0;
             border-radius: 8px;
             font-family: inherit;
             transition: border-color 0.3s ease;
-        }
-
-        .dark-mode .form-group input,
-        .dark-mode .form-group textarea {
-            background: #374151;
-            border-color: #4b5563;
-            color: white;
+            background: white;
+            color: #333;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(191, 225, 255, 0.1);
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
         /* Social Links */
@@ -306,8 +313,8 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: var(--primary);
-            color: #333;
+            background: #667eea;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -316,15 +323,10 @@
             font-size: 1.3rem;
         }
 
-        .dark-mode .social-link {
-            background: rgba(191, 225, 255, 0.2);
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
         .social-link:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(191, 225, 255, 0.3);
+            background: #5568d3;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
         }
 
         /* Mobile Menu */
@@ -341,10 +343,6 @@
             justify-content: center;
             gap: 2rem;
             animation: slideIn 0.3s ease;
-        }
-
-        .dark-mode .mobile-menu {
-            background: #111827;
         }
 
         .mobile-menu.active {
@@ -368,23 +366,38 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: var(--primary);
-            color: #333;
+            background: #667eea;
+            color: white;
             border: none;
             cursor: pointer;
             font-size: 1.5rem;
             z-index: 100;
             transition: all 0.3s ease;
-        }
-
-        .dark-mode .theme-toggle {
-            background: rgba(191, 225, 255, 0.2);
-            color: var(--primary);
-            border: 2px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
 
         .theme-toggle:hover {
             transform: scale(1.1);
+            background: #5568d3;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav h2 {
+            color: #667eea;
+        }
+
+        nav a {
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #667eea;
         }
 
         @media (max-width: 768px) {
@@ -402,135 +415,135 @@
         }
     </style>
 </head>
-<body class="dark-mode">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-opacity-95 backdrop-blur z-50 dark-mode" style="background: rgba(17, 24, 39, 0.95);">
+    <nav class="fixed top-0 left-0 right-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h2 class="text-2xl font-bold" style="color: var(--primary);">Portfolio</h2>
+            <h2 class="text-2xl font-bold">포트폴리오</h2>
             <div class="hidden md:flex gap-6">
-                <a href="#home" class="hover:text-blue-400 transition">Home</a>
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a>
-                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+                <a href="#home" class="hover:text-blue-400 transition">홈</a>
+                <a href="#about" class="hover:text-blue-400 transition">소개</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition">포트폴리오</a>
+                <a href="#contact" class="hover:text-blue-400 transition">문의</a>
             </div>
-            <button class="md:hidden bg-none border-none text-white text-2xl" onclick="toggleMobileMenu()">
+            <button class="md:hidden bg-none border-none text-2xl text-gray-900" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu dark-mode">
-        <button class="absolute top-6 right-6 text-2xl bg-none border-none" onclick="toggleMobileMenu()" style="color: var(--primary);">
+    <div class="mobile-menu">
+        <button class="absolute top-6 right-6 text-2xl bg-none border-none text-gray-900" onclick="toggleMobileMenu()">
             <i class="fas fa-times"></i>
         </button>
-        <div class="text-center space-y-4">
-            <a href="#home" class="block text-xl" onclick="toggleMobileMenu()">Home</a>
-            <a href="#about" class="block text-xl" onclick="toggleMobileMenu()">About</a>
-            <a href="#portfolio" class="block text-xl" onclick="toggleMobileMenu()">Portfolio</a>
-            <a href="#contact" class="block text-xl" onclick="toggleMobileMenu()">Contact</a>
+        <div class="text-center space-y-4 text-gray-900">
+            <a href="#home" class="block text-xl" onclick="toggleMobileMenu()">홈</a>
+            <a href="#about" class="block text-xl" onclick="toggleMobileMenu()">소개</a>
+            <a href="#portfolio" class="block text-xl" onclick="toggleMobileMenu()">포트폴리오</a>
+            <a href="#contact" class="block text-xl" onclick="toggleMobileMenu()">문의</a>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section dark pt-20">
+    <section id="home" class="hero-section pt-20">
         <div class="hero-content">
-            <h1>Art Branding Designer</h1>
-            <p>Crafting Visual Identities That Tell Your Story</p>
+            <h1>아트 브랜딩 디자이너</h1>
+            <p>당신의 브랜드 스토리를 시각적으로 표현합니다</p>
             <div class="cta-buttons">
-                <button class="btn-primary" onclick="document.querySelector('#portfolio').scrollIntoView();">View Portfolio</button>
-                <button class="btn-secondary" onclick="document.querySelector('#contact').scrollIntoView();">Get In Touch</button>
+                <button class="btn-primary" onclick="document.querySelector('#portfolio').scrollIntoView();">포트폴리오 보기</button>
+                <button class="btn-secondary" onclick="document.querySelector('#contact').scrollIntoView();">연락하기</button>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section dark-mode">
+    <section id="about" class="section alt">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center" style="color: var(--primary);">About Me</h2>
-            <p class="text-lg mb-8 text-center leading-relaxed opacity-90">
-                I'm a passionate Art Branding Designer with expertise in creating compelling visual identities. 
-                With a deep understanding of brand storytelling and digital illustration, I help businesses 
-                stand out through thoughtful, artistic design solutions.
+            <h2 class="text-4xl font-bold mb-8 text-center" style="color: #667eea;">나에 대해</h2>
+            <p class="text-lg mb-8 text-center leading-relaxed text-gray-700">
+                저는 강력한 시각적 정체성을 만드는 열정적인 아트 브랜딩 디자이너입니다. 
+                브랜드 스토리텔링과 고품질 디지털 일러스트레이션에 대한 깊은 이해로, 
+                기업이 시장에서 돋보일 수 있도록 창의적인 디자인 솔루션을 제공합니다.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div class="skill-card rounded-lg p-6" style="background: rgba(191, 225, 255, 0.1);">
+                <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-figma"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Figma</h3>
-                    <p class="opacity-75">UI/UX Design & Prototyping</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Figma</h3>
+                    <p class="text-gray-700">UI/UX 디자인 & 프로토타입</p>
                 </div>
-                <div class="skill-card rounded-lg p-6" style="background: rgba(191, 225, 255, 0.1);">
+                <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-adobe"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Illustrator</h3>
-                    <p class="opacity-75">Vector Graphics & Branding</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Adobe Illustrator</h3>
+                    <p class="text-gray-700">벡터 그래픽 & 브랜딩</p>
                 </div>
-                <div class="skill-card rounded-lg p-6" style="background: rgba(191, 225, 255, 0.1);">
+                <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-image"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Photoshop</h3>
-                    <p class="opacity-75">Photo Editing & Composition</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Photoshop</h3>
+                    <p class="text-gray-700">사진 편집 & 합성</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section dark-mode">
+    <section id="portfolio" class="section">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center" style="color: var(--primary);">Portfolio</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center" style="color: #667eea;">포트폴리오</h2>
             <div class="portfolio-grid">
                 <!-- Portfolio Item 1 -->
-                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop" alt="Brand Identity Design">
+                <div class="portfolio-item" onclick="openLightbox('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                    <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="브랜드 아이덴티티 디자인">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-title">Brand Identity</span>
+                        <span class="portfolio-title">브랜드 아이덴티티</span>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 2 -->
-                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop" alt="Illustration Project">
+                <div class="portfolio-item" onclick="openLightbox('https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                    <img src="https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=600" alt="일러스트레이션">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-title">Digital Illustration</span>
+                        <span class="portfolio-title">디지털 일러스트</span>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 3 -->
-                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop" alt="Packaging Design">
+                <div class="portfolio-item" onclick="openLightbox('https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                    <img src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="패키징 디자인">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-title">Packaging Design</span>
+                        <span class="portfolio-title">패키징 디자인</span>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 4 -->
-                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop" alt="Web Design">
+                <div class="portfolio-item" onclick="openLightbox('https://images.pexels.com/photos/3183180/pexels-photo-3183180.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                    <img src="https://images.pexels.com/photos/3183180/pexels-photo-3183180.jpeg?auto=compress&cs=tinysrgb&w=600" alt="웹 디자인">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-title">Web Design</span>
+                        <span class="portfolio-title">웹 디자인</span>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 5 -->
-                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop" alt="Logo Design">
+                <div class="portfolio-item" onclick="openLightbox('https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                    <img src="https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=600" alt="로고 디자인">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-title">Logo Design</span>
+                        <span class="portfolio-title">로고 디자인</span>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 6 -->
-                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop" alt="Marketing Collateral">
+                <div class="portfolio-item" onclick="openLightbox('https://images.pexels.com/photos/3183149/pexels-photo-3183149.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                    <img src="https://images.pexels.com/photos/3183149/pexels-photo-3183149.jpeg?auto=compress&cs=tinysrgb&w=600" alt="마케팅 자료">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-title">Marketing Materials</span>
+                        <span class="portfolio-title">마케팅 자료</span>
                     </div>
                 </div>
             </div>
@@ -538,42 +551,42 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section dark-mode">
+    <section id="contact" class="section alt">
         <div class="max-w-2xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center" style="color: var(--primary);">Get In Touch</h2>
+            <h2 class="text-4xl font-bold mb-8 text-center" style="color: #667eea;">연락하기</h2>
             
             <form onsubmit="handleFormSubmit(event)" class="mb-12">
                 <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+                    <input type="text" placeholder="이름" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
+                    <input type="email" placeholder="이메일" required>
                 </div>
                 <div class="form-group">
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <textarea rows="5" placeholder="메시지" required></textarea>
                 </div>
-                <button type="submit" class="btn-primary w-full py-3">Send Message</button>
+                <button type="submit" class="btn-primary w-full py-3">메시지 전송</button>
             </form>
 
             <div class="text-center mb-8">
-                <h3 class="text-xl font-bold mb-4">Contact Information</h3>
-                <p class="mb-2">📧 Email: hello@artbranding.com</p>
-                <p class="mb-6">📱 Phone: +82 10-1234-5678</p>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">연락처 정보</h3>
+                <p class="mb-2 text-gray-700">📧 이메일: hello@artbranding.com</p>
+                <p class="mb-6 text-gray-700">📱 연락처: +82 10-1234-5678</p>
             </div>
 
             <div class="text-center">
-                <h3 class="text-xl font-bold mb-6">Follow Me</h3>
+                <h3 class="text-xl font-bold mb-6 text-gray-900">나를 팔로우하세요</h3>
                 <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" class="social-link">
+                    <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://behance.net" target="_blank" class="social-link">
+                    <a href="https://behance.net" target="_blank" class="social-link" title="Behance">
                         <i class="fab fa-behance"></i>
                     </a>
-                    <a href="https://github.com" target="_blank" class="social-link">
+                    <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://dribbble.com" target="_blank" class="social-link">
+                    <a href="https://dribbble.com" target="_blank" class="social-link" title="Dribbble">
                         <i class="fab fa-dribbble"></i>
                     </a>
                 </div>
@@ -582,20 +595,20 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black bg-opacity-50 text-center py-6 dark-mode">
-        <p class="opacity-75">&copy; 2026 Art Branding Designer. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <p class="opacity-75">&copy; 2026 아트 브랜딩 디자이너. 모든 권리 보유.</p>
     </footer>
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <div class="lightbox-content">
             <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-            <img id="lightbox-img" src="" alt="Portfolio Item">
+            <img id="lightbox-img" src="" alt="포트폴리오 아이템">
         </div>
     </div>
 
     <!-- Theme Toggle Button -->
-    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+    <button class="theme-toggle" onclick="toggleTheme()" title="다크 모드 전환">
         <i class="fas fa-moon"></i>
     </button>
 
@@ -608,18 +621,13 @@
 
             if (isDarkMode) {
                 body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                document.querySelectorAll('.dark-mode').forEach(el => {
-                    el.classList.remove('dark-mode');
-                });
+                document.body.style.backgroundColor = '#ffffff';
+                document.body.style.color = '#333333';
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             } else {
-                body.classList.remove('light-mode');
                 body.classList.add('dark-mode');
-                document.querySelectorAll('.light-mode').forEach(el => {
-                    el.classList.remove('light-mode');
-                    el.classList.add('dark-mode');
-                });
+                document.body.style.backgroundColor = '#1a1a1a';
+                document.body.style.color = '#ffffff';
                 themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
             }
         }
@@ -662,13 +670,8 @@
         // Form Submit Handler
         function handleFormSubmit(event) {
             event.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
+            alert('메시지를 보내주셔서 감사합니다! 곧 연락드리겠습니다.');
             event.target.reset();
-        }
-
-        // System Dark Mode Detection
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add('dark-mode');
         }
     </script>
 
